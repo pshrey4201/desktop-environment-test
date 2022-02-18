@@ -1,0 +1,10 @@
+struct test_view *desktop_view_at(struct test_server *server, double lx, double ly, struct wlr_surface **surface, double *sx, double *sy);
+void process_cursor_move(struct test_server *server, uint32_t time);
+void process_cursor_resize(struct test_server *server, uint32_t time);
+void process_cursor_motion(struct test_server *server, uint32_t time);
+void server_cursor_motion(struct wl_listener *listener, void *data);
+void server_cursor_motion_absolute(struct wl_listener *listener, void *data);
+void server_cursor_button(struct wl_listener *listener, void *data);
+void server_cursor_axis(struct wl_listener *listener, void *data);
+void server_cursor_frame(struct wl_listener *listener, void *data);
+void begin_interactive(struct test_view *view, enum test_cursor_mode mode, uint32_t edges);

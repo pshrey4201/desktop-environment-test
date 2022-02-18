@@ -14,8 +14,10 @@ struct test_view {
 	struct wl_listener request_resize;
 	int x, y;
 };
-void focus_view(struct test_view *view, struct wlr_surface *surface);
+
 void xdg_toplevel_map(struct wl_listener *listener, void *data);
 void xdg_toplevel_unmap(struct wl_listener *listener, void *data);
 void xdg_toplevel_destroy(struct wl_listener *listener, void *data);
+void xdg_toplevel_request_move(struct wl_listener *listener, void *data);
+void xdg_toplevel_request_resize(struct wl_listener *listener, void *data);
 void server_new_xdg_surface(struct wl_listener *listener, void *data);

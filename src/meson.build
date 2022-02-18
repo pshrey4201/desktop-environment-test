@@ -3,6 +3,9 @@ test_sources = files(
     'server.c',
     'output.c',
     'xdg_shell.c',
+    'cursor.c',
+    'seat.c',
+    'keyboard.c',
 )
 
 test_deps = [
